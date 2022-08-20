@@ -81,10 +81,10 @@ Execute the query:
 - $con->query($sql)
 
 After form is submitted, Thank you message is shown on the website.
-- For this a variable is maintained ($insert) Initially : $insert=false;
+For this a variable is maintained ($insert) Initially : $insert=false;
 
 After sql query is executed successfully: $insert=true;
-- In the html if($insert == true) show thank you message.
+In the html if($insert == true) show thank you message.
 
 Styling of the website is done using css in style.css
 
