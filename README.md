@@ -90,7 +90,7 @@ Styling of the website is done using css in style.css
 
 Check if the submitted values inserted successfully using the command on sql command line: SELECT * FROM form;
 
-###Deployment
+### Deployment
 To run this website go to web browser and open the following link
 ```
   localhost/assign/index.php
