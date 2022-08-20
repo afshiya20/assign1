@@ -1,8 +1,8 @@
 # assign1
 
-**##1.Website made using LAMP Stack**
+## **1.Website made using LAMP Stack**
 
-###Installation
+### Installation
 **Step 1:** Open Linux terminal and Install apache, mysql servers and php using following command
 sudo apt install apache2
 sudo apt install mysql-server
@@ -29,7 +29,7 @@ service apache2 restart
 sudo service apache2 start 
 sudo service mysql start
 
-##**Setting files and Database**
+### **Setting files and Database**
 
 **Database Setup**
 
@@ -42,7 +42,6 @@ Login to the mysql user made:
 mysql -u user -p 
 
 Create database and table:
-
 CREATE DATABASE form;
 USE form;
 CREATE TABLE form 
