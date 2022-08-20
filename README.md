@@ -70,9 +70,9 @@ Create connection to database using:
 $con = new mysqli($server, $username, $password, $database);
 ```
 Get the values from the submitted form using:
-$name = $_POST["name"];
-$email = $_POST["email"];
-$message = $_POST["message"];
+- $name = $_POST["name"];
+- $email = $_POST["email"];
+- $message = $_POST["message"];
 
 SQL Query to insert the values into the database:
 $sql = "INSERT INTO data (name, email, message) VALUES ('$name', '$email', '$message');";
