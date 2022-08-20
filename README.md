@@ -4,9 +4,11 @@
 
 ### Installation
 **Step 1:** Open Linux terminal and Install apache, mysql servers and php using following command
+'''
 sudo apt install apache2
 sudo apt install mysql-server
 sudo apt install php libapache2-mod-php
+'''
 
 **Step 2:** Set up mysql root user with password using:
 sudo mysql_secure_installation utility 
