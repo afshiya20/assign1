@@ -6,7 +6,7 @@ if(isset($_POST['name'])){
     $server = "localhost";
     $username = "afshiya";
     $password = "afshiya123";
-    $db = "form";
+    $db = "database";
 
     // Create a database connection
     $con = new mysqli($server, $username, $password, $db);
