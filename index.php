@@ -4,7 +4,7 @@ if(isset($_POST['name'])){
 
     // Set connection variables
     $server = "localhost";
-    $username = "coder";
+    $username = "afshiya";
     $password = "afshiya123";
     $db = "form";
 
@@ -21,7 +21,7 @@ if(isset($_POST['name'])){
     $message = $_POST["message"];
 
     // database name (form) and then table name (data)
-    $sql = "INSERT INTO data (name, email, message) VALUES ('$name', '$email', '$message');";
+    $sql = "INSERT INTO data (name, email, message) VALUES ', ('$name'$email', '$message');";
 
     // Execute the query
     if($con->query($sql) == true){
