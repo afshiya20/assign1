@@ -1,90 +1,217 @@
-<?php
-$insert = false;
-if(isset($_POST['name'])){
+<?php 
 
-    // Set connection variables
-    $server = "localhost";
-    $username = "afshiya";
-    $password = "afshiya123";
-    $db = "database";
+    include("connect.php"); 
 
-    // Create a database connection
-    $con = new mysqli($server, $username, $password, $db);
+  
 
-    // Check for connection success
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
+    if (isset($_POST['btn'])) { 
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+        $date=$_POST['idate']; 
 
-    // database name (form) and then table name (data)
-    $sql = "INSERT INTO data (name, email, message) VALUES ', ('$name'$email', '$message');";
+        $q="select * from grocerytb where Date='$date'"; 
 
-    // Execute the query
-    if($con->query($sql) == true){
-        // Flag for successful insertion
-        $insert = true;
-    }
-    else {
-        echo "Error: " . $sql . "<br>" . $con->error;
-    }
+        $query=mysqli_query($con,$q); 
 
-    // Close the database connection
-    $con->close();
-}
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+    }  
 
-<head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">     
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    
-    <title>AfshiyaRoohi</title>
+    else { 
 
-</head>
+        $q= "select * from grocerytb"; 
 
-<body>
+        $query=mysqli_query($con,$q); 
 
-    <div class="blue">
-        <h1>Afshiya Roohi</h1>
-        <h3>BT20CSE110</h3>
-        <p>Student of Visvesvaraya National Institute of Technology</p>
-        <p>3rd year student pursuing Computer Science and Engineering</p>
-        <hr>
-        <h4>Skills</h4>
-        <p>Coding Languages : C, C++</p>
-        <p>Basics of HTML, CSS, PHP, MySQL</p>
-    </div>
-    <div class="mid">
-        <h3 class="midhead">About the assignment</h3>
-        <p class="midpara">We are using LAMP Stack (Linux, Apache Server, MySql, PHP) for this assignment. <br>We are using PHP and
-            MySql in the Contact Form given below.<br> Website is running on Apache Server on Linux Operating System.
-        </p>
-    </div>
-    <?php
-        if($insert == true){
-            echo "Thanks for submitting your form.";
-        }
-    ?>
-    <div class="blue">
-        <h3>Contact Form</h3>
-        <form action="index.php" method="post">
+    } 
+?> 
 
-            <input type="text" name="name" id="name" placeholder="Enter your Name"><br><br>
-            <input type="email" name="email" id="email" placeholder="Enter your Email"><br><br>
-            <textarea name="message" id="message" placeholder="Enter your Message" rows="10" cols="30"></textarea><br><br>
-            
-            <input class="btn" type="submit" value="Send a message to us"><br><br>
-        </form>
-    </div>
-</body>
+  
+<html> 
 
+  
+<head> 
+
+    <meta http-equiv="Content-Type" 
+
+        content="text/html; charset=UTF-8"> 
+
+  
+
+    <title>View List</title> 
+
+  
+
+    <link rel="stylesheet" href= 
+
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+
+  
+
+    <link rel="stylesheet" 
+
+        href="css/style.css"> 
+</head> 
+
+  
+<body> 
+
+    <div class="container mt-5"> 
+
+          
+
+        <!-- top --> 
+
+        <div class="row"> 
+
+            <div class="col-lg-8"> 
+
+                <h1>View Grocery List</h1> 
+
+                <a href="add.php">Add Item</a> 
+
+            </div> 
+
+            <div class="col-lg-4"> 
+
+                <div class="row"> 
+
+                    <div class="col-lg-8"> 
+
+                          
+
+                        <!-- Date Filtering--> 
+
+                        <form method="post" action=""> 
+
+                            <input type="text" 
+
+                                class="form-control" 
+
+                                name="idate"> 
+
+                          
+
+                            <div class="col-lg-4" 
+
+                                method="post"> 
+
+                                <input type="submit" 
+
+                                class="btn btn-danger float-right" 
+
+                                name="btn" value="filter"> 
+
+                            </div> 
+
+                        </form> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+  
+
+        <!-- Grocery Cards --> 
+
+        <div class="row mt-4"> 
+
+            <?php 
+
+                while ($qq=mysqli_fetch_array($query))  
+
+                { 
+
+            ?> 
+
+  
+
+            <div class="col-lg-4"> 
+
+                <div class="card"> 
+
+                    <div class="card-body"> 
+
+                        <h5 class="card-title"> 
+
+                            <?php echo $qq['Item_name']; ?> 
+
+                        </h5> 
+
+                        <h6 class="card-subtitle mb-2 text-muted"> 
+
+                            <?php echo 
+
+                            $qq['Item_Quantity']; ?> 
+
+                        </h6> 
+
+                        <?php 
+
+                        if($qq['Item_status'] == 0) { 
+
+                        ?> 
+
+                        <p class="text-info">PENDING</p> 
+
+  
+
+                        <?php 
+
+                        } else if($qq['Item_status'] == 1) { 
+
+                        ?> 
+
+                        <p class="text-success">BOUGHT</p> 
+
+  
+
+                        <?php } else { ?> 
+
+                        <p class="text-danger">NOT AVAILABLE</p> 
+
+  
+
+                        <?php } ?> 
+
+                        <a href= 
+
+                        "delete.php?id=<?php echo $qq['Id']; ?>" 
+
+                            class="card-link"> 
+
+                            Delete
+
+                        </a> 
+
+                        <a href= 
+
+                        "update.php?id=<?php echo $qq['Id']; ?>" 
+
+                            class="card-link"> 
+
+                            Update 
+
+                        </a> 
+
+                    </div> 
+
+                </div><br> 
+
+            </div> 
+
+            <?php 
+
+            } 
+
+            ?> 
+
+        </div> 
+
+    </div> 
+</body> 
+
+  
 </html>
+
