@@ -75,8 +75,8 @@ Following is the screenshot of database from mysql
 ![image](https://user-images.githubusercontent.com/99676365/186228019-08455437-589d-44e0-b960-1a151595e514.png)
 
 **ADD**
-
 Adding data in website
+
 ![image](https://user-images.githubusercontent.com/99676365/186228582-b555121f-8c7d-494f-bfa3-29b1e31bcd76.png)
 
 Successfully reflected in mysql
