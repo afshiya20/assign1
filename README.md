@@ -66,7 +66,7 @@ To run this website go to web browser and open the following link
 ```
   localhost/project/index.php
 ```
-** SHOW**
+**SHOW**
 Following is the screenshot of index.php website
 ![image](https://user-images.githubusercontent.com/99676365/186227333-92e1645d-0799-418d-a5e3-fe25848490ed.png)
 Following is the screenshot of database from mysql
