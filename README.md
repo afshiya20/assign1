@@ -45,55 +45,53 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'user'@'localhost';
 FLUSH PRIVILEGES; 
 ```
-![image](https://user-images.githubusercontent.com/99676365/186222980-c4b65bfd-a3ee-4e36-99c3-21962f58ba13.png)
+![image](https://user-images.githubusercontent.com/99676365/186223330-7b8518a0-3548-4201-9769-0d9b7a003289.png)
+
 
 Login to the mysql user made:
 ```
 mysql -u user -p 
 ```
 Create database and table:
-```
-CREATE DATABASE form;
-USE form;
-CREATE TABLE form 
-    (id INT NOT NULL AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL, 
-    email VARCHAR(50) NOT NULL, 
-    message VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
-    );
- ```   
-**PHP File Description**
+  
+ ![image](https://user-images.githubusercontent.com/99676365/186223486-55a10c6b-d02b-4920-b6ba-f0af1d9266a8.png)
+ ![image](https://user-images.githubusercontent.com/99676365/186223770-f03aec57-aa86-489c-8246-9576ac91216b.png)
 
-PHP and HTML code written in index.php made in assign folder in /var/www/html. The website contains a static plain html part where details of the student and the assignment is given Website also contains a html form where PHP is used to connect to the database and send the submitted form details to insert into the mysql database.
 
 Create connection to database using:
 ```
-$con = new mysqli($server, $username, $password, $database);
+$con=mysqli_connect("localhost","roohi","afshiya123","grocerydb"); 
 ```
-Get the values from the submitted form using:
-- $name = $_POST["name"];
-- $email = $_POST["email"];
-- $message = $_POST["message"];
-
-SQL Query to insert the values into the database:
-- $sql = "INSERT INTO data (name, email, message) VALUES ('$name', '$email', '$message');";
-
-Execute the query:
-- $con->query($sql)
-
-After form is submitted, Thank you message is shown on the website.
-For this a variable is maintained ($insert) Initially : $insert=false;
-
-After sql query is executed successfully: $insert=true;
-In the html if($insert == true) show thank you message.
-
-Styling of the website is done using css in style.css
-
-Check if the submitted values inserted successfully using the command on sql command line: SELECT * FROM form;
-
-### Deployment
 To run this website go to web browser and open the following link
 ```
-  localhost/assign/index.php
+  localhost/project/index.php
 ```
+** SHOW**
+Following is the screenshot of index.php website
+![image](https://user-images.githubusercontent.com/99676365/186227333-92e1645d-0799-418d-a5e3-fe25848490ed.png)
+Following is the screenshot of database from mysql
+![image](https://user-images.githubusercontent.com/99676365/186228019-08455437-589d-44e0-b960-1a151595e514.png)
+
+**ADD**
+Adding data in website
+![image](https://user-images.githubusercontent.com/99676365/186228582-b555121f-8c7d-494f-bfa3-29b1e31bcd76.png)
+Successfully reflected in mysql
+![image](https://user-images.githubusercontent.com/99676365/186228698-e4133931-5e9c-4bb1-a09c-7f1fccf799c9.png)
+
+**DELETE**
+Deleting a grocery element in website
+![image](https://user-images.githubusercontent.com/99676365/186229552-7bfeec2f-10ea-438f-a180-7a8f55a96651.png)
+Successfully reflected in mysql
+![image](https://user-images.githubusercontent.com/99676365/186229790-5ab8e669-40ad-45f8-94f7-08b98432a5ab.png)
+
+**UPDATE**
+Updating details in website
+![image](https://user-images.githubusercontent.com/99676365/186230360-5e042a77-150b-4705-be11-1ec8b8de229e.png)
+Successfully reflected in mysql
+![image](https://user-images.githubusercontent.com/99676365/186230540-d2142d35-8c23-4af0-a3f9-3cd466ae9559.png)
+
+
+
+
+
+
