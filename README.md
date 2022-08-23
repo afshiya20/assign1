@@ -75,27 +75,33 @@ Following is the screenshot of database from mysql
 ![image](https://user-images.githubusercontent.com/99676365/186228019-08455437-589d-44e0-b960-1a151595e514.png)
 
 **ADD**
+
 Adding data in website
 
 ![image](https://user-images.githubusercontent.com/99676365/186228582-b555121f-8c7d-494f-bfa3-29b1e31bcd76.png)
 
 Successfully reflected in mysql
+
 ![image](https://user-images.githubusercontent.com/99676365/186228698-e4133931-5e9c-4bb1-a09c-7f1fccf799c9.png)
 
 **DELETE**
 
 Deleting a grocery element in website
+
 ![image](https://user-images.githubusercontent.com/99676365/186229552-7bfeec2f-10ea-438f-a180-7a8f55a96651.png)
 
 Successfully reflected in mysql
+
 ![image](https://user-images.githubusercontent.com/99676365/186229790-5ab8e669-40ad-45f8-94f7-08b98432a5ab.png)
 
 **UPDATE**
 
 Updating details in website
+
 ![image](https://user-images.githubusercontent.com/99676365/186230360-5e042a77-150b-4705-be11-1ec8b8de229e.png)
 
 Successfully reflected in mysql
+
 ![image](https://user-images.githubusercontent.com/99676365/186230540-d2142d35-8c23-4af0-a3f9-3cd466ae9559.png)
 
 
