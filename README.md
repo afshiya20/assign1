@@ -45,22 +45,22 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'user'@'localhost';
 FLUSH PRIVILEGES; 
 ```
-![image](https://user-images.githubusercontent.com/99676365/186223330-7b8518a0-3548-4201-9769-0d9b7a003289.png)
-
 
 Login to the mysql user made:
 ```
-mysql -u user -p 
+mysql -u root -p 
 ```
 Create database and table:
   
- ![image](https://user-images.githubusercontent.com/99676365/186223486-55a10c6b-d02b-4920-b6ba-f0af1d9266a8.png)
- ![image](https://user-images.githubusercontent.com/99676365/186223770-f03aec57-aa86-489c-8246-9576ac91216b.png)
+ ![image](https://user-images.githubusercontent.com/99676365/186687446-e1e9c630-75a5-4fb8-bf23-ad10def44349.png)
+![image](https://user-images.githubusercontent.com/99676365/186688528-1c34f501-218e-4818-bac8-84ce0aafb2e1.png)
+![image](https://user-images.githubusercontent.com/99676365/186688657-ee5ace4e-2a66-4fa3-b267-f8990f98adf8.png)
+
 
 
 Create connection to database using:
 ```
-$con=mysqli_connect("localhost","roohi","afshiya123","grocerydb"); 
+$con=mysqli_connect("localhost","roohi","afshiya123","db"); 
 ```
 To run this website go to web browser and open the following link
 ```
@@ -69,40 +69,50 @@ To run this website go to web browser and open the following link
 **SHOW**
 
 Following is the screenshot of index.php website
-![image](https://user-images.githubusercontent.com/99676365/186227333-92e1645d-0799-418d-a5e3-fe25848490ed.png)
+
+![image](https://user-images.githubusercontent.com/99676365/186688817-dc605cd3-d226-4295-9d1d-74a1e5259d5f.png)
+
 
 Following is the screenshot of database from mysql
-![image](https://user-images.githubusercontent.com/99676365/186228019-08455437-589d-44e0-b960-1a151595e514.png)
+
+![image](https://user-images.githubusercontent.com/99676365/186689131-40035eb3-b60f-4025-b920-5ba8c5567bef.png)
+
 
 **ADD**
 
 Adding data in website
 
-![image](https://user-images.githubusercontent.com/99676365/186228582-b555121f-8c7d-494f-bfa3-29b1e31bcd76.png)
+![image](https://user-images.githubusercontent.com/99676365/186689358-0a20688c-5140-4993-b23d-6ad9549210b5.png)
+
 
 Successfully reflected in mysql
 
-![image](https://user-images.githubusercontent.com/99676365/186228698-e4133931-5e9c-4bb1-a09c-7f1fccf799c9.png)
+![image](https://user-images.githubusercontent.com/99676365/186689472-1fa7877c-9950-48d9-b567-60591398eba2.png)
+
 
 **DELETE**
 
 Deleting a grocery element in website
 
-![image](https://user-images.githubusercontent.com/99676365/186229552-7bfeec2f-10ea-438f-a180-7a8f55a96651.png)
+![image](https://user-images.githubusercontent.com/99676365/186689902-cd1128b5-24b6-43d3-a2be-471b9143e82b.png)
+
 
 Successfully reflected in mysql
 
-![image](https://user-images.githubusercontent.com/99676365/186229790-5ab8e669-40ad-45f8-94f7-08b98432a5ab.png)
+![image](https://user-images.githubusercontent.com/99676365/186690041-c54821eb-4fd1-4225-b872-cfd93d78064e.png)
+
 
 **UPDATE**
 
 Updating details in website
 
-![image](https://user-images.githubusercontent.com/99676365/186230360-5e042a77-150b-4705-be11-1ec8b8de229e.png)
+![image](https://user-images.githubusercontent.com/99676365/186690538-8c9e6a76-9dd7-453e-bc72-ac960d170b57.png)
+
 
 Successfully reflected in mysql
 
-![image](https://user-images.githubusercontent.com/99676365/186230540-d2142d35-8c23-4af0-a3f9-3cd466ae9559.png)
+![image](https://user-images.githubusercontent.com/99676365/186690831-6d73555f-76a1-49d4-b5c4-3570272d8704.png)
+
 
 
 
